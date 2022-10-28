@@ -1,19 +1,43 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&family=Island+Moments&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,500&family=Oswald:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,800;1,400&family=Poppins:ital,wght@0,200;0,600;1,200&display=swap');
+
+* {
     margin: 0;
     padding: 0;
     outline: 0;
+    border: none;
 }
-html,body{
+
+html,
+body {
     overflow-y: scroll;
     overflow-x: hidden;
+    font-family: 'Dancing Script',
+        cursive;
+    font-family: 'Island Moments',
+        cursive;
+    font-family: 'Montserrat',
+        sans-serif;
+    font-family: 'Oswald',
+        sans-serif;
+    font-family: 'Playfair Display',
+        serif;
+    font-family: 'Poppins',
+        sans-serif;
 }
-ul{
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+ul {
     list-style: none;
 }
-li{
+
+li {
     list-style: none;
 }
-a{
+
+a {
     text-decoration: none
 }
 
