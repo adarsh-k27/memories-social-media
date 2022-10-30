@@ -2,7 +2,7 @@ import { NavBar, SideBar } from "./components";
 import Router_wrapper from "./router";
 function App() {
   return (
-    <div className="App w-screen">
+    <div className="App w-screen h-screen md:h-auto">
       <NavBar />
       <Router_wrapper>
 
