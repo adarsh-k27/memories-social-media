@@ -7,6 +7,7 @@ import {
   Tags
 } from '../components'
 function AddPost () {
+  const [loading,setLoading]=useState(false)
   const [Title, setTitle] = useState('')
   const [shortDesc, setshortDesc] = useState('')
   const [Desc, setDesc] = useState('')
@@ -22,6 +23,8 @@ function AddPost () {
       setTag("")
     }
   }
+
+
   return (
     <div className='w-screen h-auto flex flex-col justify-center items-center px-1 md:px-[1.5rem] py-1 md:py-[1.5rem]'>
       <h2 className='text-lg font-bold font-[oswald] text-black/60 mb-3'>
