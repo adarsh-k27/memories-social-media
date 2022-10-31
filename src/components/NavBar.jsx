@@ -24,7 +24,7 @@ function NavBar () {
         </NavLink>
       </div>
       <div className=' w-24 mr-3 md:w-36 md:mr-6  ml-auto'>
-        <LinkButton />
+        <LinkButton to={'signin'} />
       </div>
     </div>
   )

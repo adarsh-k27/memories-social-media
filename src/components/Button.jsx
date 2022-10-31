@@ -14,7 +14,7 @@ function Button ({ to }) {
   }
 
   return (
-    <Link to={'/'} className='w-full h-auto  '>
+    <Link to={to} className='w-full h-auto  '>
       <motion.div
         variants={ButtonVariants}
         whileHover={'hover'}
