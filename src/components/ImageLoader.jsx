@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import { BsFillCloudArrowDownFill } from '../icons'
 import {Loading} from '../components'
 import rani from '../assets/rainbow.png'
-function ImageLoader ({ loading, imageUrl }) {
+function ImageLoader ({ loading, imageUrl,setState }) {
   const File = useRef()
   return (
     <div className='w-full h-[15rem] md:h-full py-1 border-2 border-solid border-gray-500 flex flex-col items-center justify-center'>
@@ -20,7 +20,10 @@ function ImageLoader ({ loading, imageUrl }) {
           {
             !imageUrl ? (
            <div><label htmlFor=''>
-            <input type='file' name='' id='' className='hidden' ref={File} />
+            <input type='file' name='' id='' className='hidden' ref={File} onChange={(e)=>{
+              e.preventDefault()
+              setState(e.target.files[0])
+            }} />
             <BsFillCloudArrowDownFill className='text-6xl text-gray-600' />
           </label>
           <p>Choose Image</p></div>
