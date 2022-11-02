@@ -2,8 +2,10 @@ import React from 'react'
 import { NAV_BAR_NAME_COLOR } from '../styles'
 import { NavLink } from 'react-router-dom'
 import logo from '../assets/rainbow.png'
-import { LinkButton } from '.'
+import { LinkButton,ReactButton } from '.'
+import {useSelector} from 'react-redux'
 function NavBar () {
+  const {auth} = useSelector(state=>state.AUTH)
   return (
     <div className='w-full h-auto py-[.5rem] md:py-[1rem] grid grid-cols-2 gap-3'>
       <div className='flex flex-row gap-4 items-center justify-start md:justify-start'>
@@ -24,7 +26,9 @@ function NavBar () {
         </NavLink>
       </div>
       <div className=' w-24 mr-3 md:w-36 md:mr-6  ml-auto'>
-        <LinkButton to={'signin'} />
+        {
+          !auth ? <LinkButton to={'signin'} /> : <ReactButton text="SignUp"  /> 
+        }
       </div>
     </div>
   )

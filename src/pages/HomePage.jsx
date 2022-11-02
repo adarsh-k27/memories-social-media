@@ -1,12 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import HomeWrapper from '../components/HomeWrapper'
-import {SideBar} from '../components'
+import { ReactCard, SideBar } from '../components'
+import { useSelector } from 'react-redux'
+import { FetchPosts } from '../api/user'
 function HomePage () {
+  const { page, posts } = useSelector(state => state.POSTS)
+  //console.log("hhh",page);
+  useEffect(() => {
+    FetchPosts(page)
+  }, [page])
   return (
     <HomeWrapper>
-      
       <div className='w-full h-screen md:h-auto grid grid-rows-[85%,15%] md:grid-cols-[75%,25%] mx-2'>
-        <p>Home Page Components</p>
+        <div className='flex flex-wrap gap-3'>
+          {posts.length > 0 && posts.map((post, index) => <ReactCard key={index} data={post} />)}
+        </div>
         <SideBar />
       </div>
     </HomeWrapper>

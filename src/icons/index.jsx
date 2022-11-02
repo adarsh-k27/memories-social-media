@@ -3,12 +3,15 @@ export {
   AiOutlineCloseCircle,
   AiOutlineDelete,
   AiOutlineEye,
-  AiOutlineEyeInvisible
+  AiOutlineEyeInvisible,
+ AiFillDislike,
+ AiFillLike
 
 } from 'react-icons/ai'
 
 export { BiSkipNext, BiSkipPrevious } from 'react-icons/bi'
 
-export { BsFillCloudArrowDownFill } from 'react-icons/bs'
+export { BsFillCloudArrowDownFill,BsThreeDotsVertical
+ } from 'react-icons/bs'
 export {FcGoogle
 } from 'react-icons/fc'

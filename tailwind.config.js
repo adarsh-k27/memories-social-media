@@ -44,7 +44,7 @@ module.exports = {
       },
       colors: {
         sidebarColor: "#242730",
-        darkBgColor: "#010300",
+        darkBgColor: "#485B54",
         lightBgColor: "#F8EBE4",
         lightSideBar: "#EAD9CA",
         boxColor: "#EAD9C9",
