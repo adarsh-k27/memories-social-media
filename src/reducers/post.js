@@ -30,9 +30,6 @@ const PostReducer = createSlice({
             ...state,
             posts:action.payload
            }
-        },
-        setPrevious:(state,action)=>{
-           
         }
     }
 })

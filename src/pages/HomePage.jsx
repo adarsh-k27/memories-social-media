@@ -12,8 +12,9 @@ function HomePage () {
   return (
     <HomeWrapper>
       <div className='w-full h-screen md:h-auto grid grid-rows-[85%,15%] md:grid-cols-[75%,25%] mx-2'>
-        <div className='flex flex-wrap gap-3'>
-          {posts.length > 0 && posts.map((post, index) => <ReactCard key={index} data={post} />)}
+        <div className='flex flex-wrap items-center justify-start gap-6'>
+          {posts.length > 0 &&
+            posts.map((post, index) => <ReactCard key={index} data={post} />)}
         </div>
         <SideBar />
       </div>

@@ -27,7 +27,7 @@ function NavBar () {
       </div>
       <div className=' w-24 mr-3 md:w-36 md:mr-6  ml-auto'>
         {
-          !auth ? <LinkButton to={'signin'} /> : <ReactButton text="SignUp"  /> 
+          !auth ? <LinkButton to={'signin'} /> : <ReactButton text="SignOut"  /> 
         }
       </div>
     </div>

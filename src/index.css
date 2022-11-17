@@ -41,6 +41,11 @@ a {
     text-decoration: none
 }
 
+.MuiCardMedia-img {
+    width: full;
+    height: 9rem;
+    object-fit: cover;
+}
 
 @tailwind base;
 @tailwind components;

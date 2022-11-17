@@ -6,22 +6,19 @@ import { NextPage, PreviosPage } from '../reducers/post'
 import { useDispatch } from 'react-redux'
 function Pagination () {
   const { page } = useSelector(state => state.POSTS)
-  const dispatch = useDispatch()
+  // const dispatch = useDispatch()
   return (
     <div className='w-full h-auto flex flex-row py-1 gap-3 items-center justify-center shadow-sm shadow-black/20 border-solid border-t-2 border-t-white/20 border-white/20 bg-white/20'>
       {page !== 1 && (
         <IconBox
           title={'previous'}
           icon={<BiSkipPrevious />}
-          onClickFn={dispatch(PreviosPage())}
+          onClickFn={PreviosPage()}
         />
       )}
-      <p>{page}</p>
-      <IconBox
-        title={'Next'}
-        icon={<BiSkipNext />}
-        onClickFn={dispatch(NextPage())}
-      />
+
+      <p className='text-lg font-semibold'>{page}</p>
+      <IconBox title={'Next'} icon={<BiSkipNext />} onClickFn={NextPage()} />
     </div>
   )
 }
