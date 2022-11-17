@@ -9,7 +9,7 @@ function BottomBar() {
     const { auth } = useSelector(state => state.AUTH)
 
   return (
-    <div className='w-full flex  md:hidden flex-row gap-3 items-center justify-between '>
+    <div className='w-full flex  md:hidden flex-row gap-3 items-center justify-between absolute bottom-6 '>
        <LinkIcon title={'Add Post'} icon={<AiOutlinePlus />} to={'add-post'} />
 {
   auth && (
