@@ -21,8 +21,14 @@ function HomePage () {
               posts.map((post, index) => <ReactCard key={index} data={post} />)}
           </div>
         </div>
-        <SideBar />
-        <BottomBar />
+        <div>
+          <div className='hidden md:block'>
+           <SideBar />
+        </div>
+        <div className='block md:hidden'>
+          <BottomBar />
+        </div>
+        </div>
       </div>
     </HomeWrapper>
   )
